@@ -92,7 +92,7 @@ float LinuxParser::MemoryUtilization()
       if(t1==1 && t2==1){break;}
     }
   }
-  return MemTot-MemFre;
+  return (MemTot-MemFre)/MemTot;// forgot to divide with total memory, its one of approach i found on google.
 }
 
 // TODO: Read and return the system uptime
